@@ -29,7 +29,7 @@ end
 
 def taggify(s)
   return "" if s.nil?
-  s.downcase.gsub(/[^a-z0-9\-_@\!']/,'').strip
+  s.downcase.gsub(/[^a-z0-9\-_@\!' ]/,'').strip
 end
 
 def import(fname)
