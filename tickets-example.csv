@@ -1,3 +1,2 @@
-title,description,tags
-this is a title,and a description,feature wontfix
-
+title,description,tags,state,milestone
+this is a title,and a description,feature,open,12345
