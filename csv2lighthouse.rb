@@ -11,8 +11,8 @@ require 'fastercsv'
  
 # Enter your Lighthouse account and token. The token must have both
 # read & write access.
-Lighthouse.account = ''
-Lighthouse.token = ''
+Lighthouse.account = 'ACCOUNT_NAME'
+Lighthouse.token = 'TOKEN'
 
 # Your Lighthouse Project ID
 PROJECT_ID = 12345
@@ -20,7 +20,9 @@ PROJECT_ID = 12345
 def save_to_lighthouse(record)
   t = Lighthouse::Ticket.new(:project_id => PROJECT_ID,
                              :title => record['title'],
-                             :body => record['description'])
+                             :body => record['description'],
+                             :state => record['state'],
+                             :milestone_id => record['milestone'])  
   p record['title']
   t.tags << taggify(record['tags'])
   t.save
