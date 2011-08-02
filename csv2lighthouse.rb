@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'activerecord'
-require 'activesupport'
-require 'activeresource'
+require 'active_record'
+require 'active_support'
+require 'active_resource'
 require 'lighthouse'
-require 'fastercsv'
+require 'csv'
 
 # Configure Me... #####################################################
  
@@ -35,7 +35,7 @@ def taggify(s)
 end
 
 def import(fname)
-  FasterCSV.foreach(fname, :headers => :first_row) do |row|
+  CSV.foreach(fname, :headers => :first_row) do |row|
     save_to_lighthouse(row)
   end
 end
