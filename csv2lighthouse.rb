@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'activerecord'
-require 'activesupport'
-require 'activeresource'
+require 'active_record'
+require 'active_support'
+require 'active_resource'
 require 'lighthouse'
 require 'csv'
 
